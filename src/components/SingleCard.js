@@ -1,15 +1,23 @@
-import './SingleCard.css';
+import "./SingleCard.css";
 
-const SingleCard = ({ card }) => {
-    return ( 
+const SingleCard = ({ card, handleChoice }) => {
+    const handleClick = () => {
+        handleChoice(card)
+    }
 
-        <div className="card" >
-            <div>
-                <img src={card.src} alt="card front" className="front" />
-                <img src="/img/cover.png" alt="card back" className="back" />
-            </div>
+  return (
+    <div className="card">
+      <div>
+        <img src={card.src} alt="card front" className="front" />
+        <img
+          onClick={handleClick}
+          src="/img/cover.png"
+          alt="card back"
+          className="back"
+        />
       </div>
-     );
-}
- 
+    </div>
+  );
+};
+
 export default SingleCard;
