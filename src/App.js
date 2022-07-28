@@ -38,7 +38,8 @@ function App() {
     if(choiceOne && choiceTwo) {
       
       if(choiceOne.src === choiceTwo.src) {
-        console.log('cards match')
+        // console.log('cards match')
+
         setCards(prevCards => {
           return prevCards.map(card => {
             if(card.src === choiceOne.src) {
@@ -52,7 +53,8 @@ function App() {
         resetTurn()
       }
       else {
-        console.log('cards do not match')
+        // console.log('cards do not match')
+        
         setTimeout(() => resetTurn(), 1000)
       }
     }
